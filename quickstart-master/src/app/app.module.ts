@@ -6,9 +6,12 @@ import { EventBindingComponent } from './binding/eventbinding.component';
 import { DataBindingComponent } from './binding/databinding.component';
 import { PropertyBindingComponent } from './binding/propertybinding.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { RecipeBookAppComponent } from './recipe-book.component';
+import { HeaderComponent } from './header.component';
+import { RecipesComponent } from './recipes/recipes.component'
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent,EventBindingComponent,DataBindingComponent,PropertyBindingComponent,LifecycleComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent,EventBindingComponent,DataBindingComponent,PropertyBindingComponent,LifecycleComponent,RecipeBookAppComponent,HeaderComponent,RecipesComponent ],
+  bootstrap:    [ RecipeBookAppComponent ]
 })
 export class AppModule { }
