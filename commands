@@ -1,0 +1,19 @@
+npm install -g angular-cli
+
+
+
+in the directory 
+-----------------
+ng new first-app
+ng serve
+
+
+Typescript Install (Optional)
+-----------------------------
+npm install typescript -g
+
+
+Add Other Component
+-------------------
+ng generate component other 
+
