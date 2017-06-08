@@ -8,6 +8,6 @@ import { Employee } from '../employee'
 export class EmployeeListComponent {
       employees : Employee[] = [];
       employee = new Employee('dummy','dummuy','ghjkl');
-
+      
 
 }
