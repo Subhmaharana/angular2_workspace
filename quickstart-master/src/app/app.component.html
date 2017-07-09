@@ -1,0 +1,23 @@
+
+
+          <a [routerLink]="['']">Home</a>
+          <a [routerLink]="['/user',idField.value]">User</a>
+          <button (click)="navigateTo()">Go Home via Button</button>
+          <br>
+          <input type="text" #idField (input)="0"/>
+
+          <router-outlet></router-outlet>
+
+          
+          <hr />
+          <hr />
+          <h1>Hello {{name}}</h1>
+          <fa-event-bind (clicked)="onClicked($event)"></fa-event-bind>
+          <fa-prop-bind result = 10></fa-prop-bind>
+          <fa-data-bind></fa-data-bind>
+          <fa-lifecycle *ngIf="!delete">
+                <p>{{test}}</p>
+          </fa-lifecycle>
+          <button (click) = "delete = true">Click to Delete</button>
+          <button (click) = "test = 'Changed Value'">Click to Change</button>
+          <br/>
