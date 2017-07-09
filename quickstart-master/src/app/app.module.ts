@@ -1,17 +1,24 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule}      from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent }  from './app.component';
-import { EventBindingComponent } from './binding/eventbinding.component';
-import { DataBindingComponent } from './binding/databinding.component';
-import { PropertyBindingComponent } from './binding/propertybinding.component';
-import { LifecycleComponent } from './lifecycle/lifecycle.component';
-import { RecipeBookAppComponent } from './recipe-book.component';
-import { HeaderComponent } from './header.component';
-import { RecipesComponent } from './recipes/recipes.component'
+import {AppComponent}  from './app.component';
+import {EventBindingComponent} from './binding/eventbinding.component';
+import {DataBindingComponent} from './binding/databinding.component';
+import {PropertyBindingComponent} from './binding/propertybinding.component';
+import {LifecycleComponent} from './lifecycle/lifecycle.component';
+import {APP_ROUTES_PROVIDER} from './app.routing';
+import {UserComponent} from './user/user.component';
+import {HomeComponent} from './home-component.component';
 @NgModule({
-  imports:      [ BrowserModule ],
-  declarations: [ AppComponent,EventBindingComponent,DataBindingComponent,PropertyBindingComponent,LifecycleComponent,RecipeBookAppComponent,HeaderComponent,RecipesComponent ],
-  bootstrap:    [ RecipeBookAppComponent ]
+  imports: [BrowserModule, APP_ROUTES_PROVIDER],
+  declarations: [AppComponent,
+                EventBindingComponent,
+                DataBindingComponent,
+                PropertyBindingComponent,
+                LifecycleComponent,
+                UserComponent,
+                HomeComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,24 +1,24 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>
-            <fa-event-bind (clicked)="onClicked($event)"></fa-event-bind>
-            <fa-prop-bind result = 10></fa-prop-bind>
-            <fa-data-bind></fa-data-bind>
-            <fa-lifecycle *ngIf="!delete">
-                  <p>{{test}}</p>
-            </fa-lifecycle>
-            <button (click) = "delete = true">Click to Delete</button>
-            <button (click) = "test = 'Changed Value'">Click to Change</button>
-  `,
+  templateUrl: './app.component.html'
 })
-export class AppComponent  {
+export class AppComponent {
   delete = false;
   name = 'Subh';
-  test = "Starting Value";
-  onClicked(value: string){
-    alert("Oolala!");
+  test = 'Starting Value';
+
+  constructor(private router: Router) {
+  }
+
+  onClicked(value: string) {
+    alert('Oolala!');
+  }
+
+  navigateTo() {
+    this.router.navigate(['/']);
   }
 
 }
