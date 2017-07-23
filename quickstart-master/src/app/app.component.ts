@@ -3,7 +3,13 @@ import {Router} from '@angular/router';
 
 @Component({
   selector: 'my-app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styles: [` 
+        .active {
+          border:1px solid red;
+        }
+  `]
+
 })
 export class AppComponent {
   delete = false;
